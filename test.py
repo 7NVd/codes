@@ -18,8 +18,9 @@ red.height = 162
 
 batch = pyglet.graphics.Batch()
 color_bubbles = [blue, yellow, red]
-direction = [-100, 100]
+#direction = [-100, 100]
 bubble_list = []
+direction_list = []
 counter = 0
 counter_update = 0
 
@@ -27,6 +28,8 @@ def new_bubble(x, y):
 	bubble = pyglet.sprite.Sprite(random.choice(color_bubbles), batch=batch)
 	bubble.position = (x - 81, y - 81)
 	bubble_list.append(bubble)
+	dir = [-100,100]
+	direction_list.append(dir)
 	
 def update(dt):
 	for bubble in bubble_list:
