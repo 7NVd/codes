@@ -32,9 +32,9 @@ def new_bubble(x, y):
 	direction_list.append(dir)
 	
 def update(dt):
-	for bubble in bubble_list:
-		bubble.x += 100*dt
-		bubble.y += 100*dt
+	for (i=0;i<bubble_list.size();i++):
+		bubble_list[i].bubble.x += direction_list[i][0]*dt
+		bubble_list[i].bubble.y += direction_list[i][1]*dt
 	
 
 @window.event()
